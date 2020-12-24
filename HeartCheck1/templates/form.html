@@ -1,0 +1,105 @@
+{% extends 'layout.html' %}
+
+{% block title %}Heart Disease Prediction{% endblock %}
+
+{% block content %}
+<form method="post" action="./process_form">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <div class="notification">
+        Welcome to our heart health tool! Enter your information below, and using machine learning,
+        we will predict your risk assessment.
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Age</label>
+            <div class="control">
+              <input class="input" name="age" type="number" min="0", max="140" placeholder="Enter age" value="{{ form_values['age'] }}" required>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="field">
+            <label class="label">Blood Pressure</label>
+            <div class="field has-addons">
+              <div class="control is-expanded">
+                <input class="input" type="number" name="bp_systolic" min="70" max="250" placeholder="Systolic" value="{{ form_values['bp_systolic'] }}" required>
+              </div>
+              <div class="control">
+                <a class="button is-static">/</a>
+              </div>
+              <div class="control is-expanded">
+                <input class="input" type="number" name="bp_diastolic" min="40" max="150" placeholder="Diastolic" value="{{ form_values['bp_diastolic'] }}" required>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-mobile">
+        <div class="column">
+          <div class="field">
+            <label class="label">Weight (kg)</label>
+            <div class="control">
+              <input class="input" name="weight_kg" type="number" min="0" , max="500" placeholder="Enter weight in kg" value="{{ form_values['weight_kg'] }}" required>
+            </div>
+            <p class="help"><a href="https://www.rapidtables.com/convert/weight/pound-to-kg.html" target="_blank">Converter: lb to kg</a></p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Height (cm)</label>
+            <div class="control">
+              <input class="input" name="height_cm" type="number" min="0" , max="300" placeholder="Enter height in cm" value="{{ form_values['height_cm'] }}" required>
+            </div>
+            <p class="help"><a href="https://www.rapidtables.com/convert/length/height-converter.html" target="_blank">Converter: feet/inches to cm</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Cholesterol</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+            Normal
+            <span class="has-text-success">
+              <i class="fas fa-check"></i>
+            </span>
+          </label>
+        </div>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+            Above Normal
+            <span class="has-text-warning">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </label>
+        </div>
+
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="2" required {% if form_values['cholesterol'] == '2' %} checked{% endif %}>
+            Well Above Normal
+            <span class="has-text-danger">
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <input type="submit" class="button is-link">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</form>
+{% endblock %}

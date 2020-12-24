@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block title %}Heart Disease Prediction Results{% endblock %}
+
+{% block content %}
+<div class="results">
+  {% if prediction == 1 %}
+    <!-- Increased Risk Detected (> 50% probability) -->
+    <div class="results-main">
+      <div class="results-icon">
+        <i class="fas fa-stethoscope"></i>
+      </div>
+      <div class="results-pct">
+        {{ (probabilities[1] * 100) | round | int }}%
+      </div>
+    </div>
+    <div class="results-text notification is-danger">
+      Increased risk detected.
+      We recommend you speak to your doctor at your next visit.
+    </div>
+  {% else %}
+    <!-- Low Risk -->
+    <div class="results-main">
+      <div class="results-icon">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="results-pct">
+        {{ (probabilities[1] * 100) | round | int }}%
+      </div>
+    </div>
+    <div class="results-text notification is-success">
+      Looking good! You are at low risk of heart disease.
+    </div>
+  {% endif %}
+
+  <div class="back-button container has-text-centered">
+    <a class="button is-small is-text" href=".{{ url_for('.form', **form_values) }}">
+      <span class="icon">
+        <i class="fas fa-edit"></i>
+      </span>
+      <span>Edit Values</span>
+    </a>
+    <a class="button is-small is-text" href=".{{ url_for('.form') }}">
+      <span class="icon">
+        <i class="fas fa-undo"></i>
+      </span>
+      <span>Try Again</span>
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="container has-text-centered">
+  <div class="input-values">
+    <div class="is-italic has-text-grey">
+      Input values:
+    </div>
+    <div class="field is-grouped is-grouped-multiline">
+      {% for field, value in input_values.items() %}
+        <div class="control">
+          <div class="tags has-addons are-small">
+            <span class="tag">{{ field }}</span>
+            <span class="tag is-dark">{{ value }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

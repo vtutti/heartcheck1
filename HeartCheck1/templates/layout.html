@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- We are using Bulma to provide some nice styles: https://bulma.io/documentation/ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+  <link rel="stylesheet" href="./static/style.css">
+
+  {% block head %}{% endblock %} 
+
+  <title>{% block title %}HeartCheck{% endblock %}</title>
+</head>
+
+
+<body>
+ <!--<section class="hero is-warning is-bold"> -->
+	<style>
+	#img
+	{background-image: url('./static/giphy.gif'); 
+	opacity: 55%;
+	}
+	</style>
+    <div class="hero-body">
+      <div class="container">
+        
+          <img src="./static/logo-text.png" alt="HeartCheck"  width="1280vh" height="200vh">
+        
+      </div>
+    </div>
+  
+  <div 
+  <section id="img" class="section">
+    
+    <div class="container">
+     <p style="position: absolute;bottom: 50%,top: 50%,transform: translate(-50%,50%);">
+      <h1 class="title is-size-3-tablet is-size-4-mobile has-text-centered">
+        <i class="fas fa-heartbeat"></i>
+       
+        HeartCheck Monitor
+      </h1>
+
+      {% block content %}{% endblock %}
+    
+    </div>
+   </p>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      {% block footer %}{% endblock %}
+
+      <p class="disclaimer is-size-7">
+        <em>
+          * Note that this tool is for informational purposes only and does not
+            constitute medical advice. Please consult your doctor.
+        </em>
+      </p>
+    </div>
+   
+  </footer>
+</div>
+</body>
+</html>
