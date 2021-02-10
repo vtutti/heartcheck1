@@ -31,7 +31,7 @@ footer .disclaimer {
   margin: 20px auto 0;
 }
 
-div#content {
+.container {
     background-image: url(my_image.png);
     background-color: rgba(255,255,255,0.6);
     background-blend-mode: lighten;
