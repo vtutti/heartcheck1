@@ -16,7 +16,7 @@
           <div class="field">
             <label class="label">Age</label>
             <div class="control">
-              <input class="input" name="age" type="number" min="0", max="140" placeholder="Enter age" value="{{ form_values['age'] }}" required>
+              <input class="input" name="age" type="number" min="1", max="110" placeholder="Enter age" value="{{ form_values['age'] }}" required>
             </div>
           </div>
         </div>
@@ -25,13 +25,13 @@
             <label class="label">Blood Pressure</label>
             <div class="field has-addons">
               <div class="control is-expanded">
-                <input class="input" type="number" name="bp_systolic" min="70" max="250" placeholder="Systolic" value="{{ form_values['bp_systolic'] }}" required>
+                <input class="input" type="number" name="bp_systolic" min="100" max="180" placeholder="Systolic" value="{{ form_values['bp_systolic'] }}" required>
               </div>
               <div class="control">
                 <a class="button is-static">/</a>
               </div>
               <div class="control is-expanded">
-                <input class="input" type="number" name="bp_diastolic" min="40" max="150" placeholder="Diastolic" value="{{ form_values['bp_diastolic'] }}" required>
+                <input class="input" type="number" name="bp_diastolic" min="70" max="120" placeholder="Diastolic" value="{{ form_values['bp_diastolic'] }}" required>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
           <div class="field">
             <label class="label">Weight (kg)</label>
             <div class="control">
-              <input class="input" name="weight_kg" type="number" min="0" , max="500" placeholder="Enter weight in kg" value="{{ form_values['weight_kg'] }}" required>
+              <input class="input" name="weight_kg" type="number" min="0" , max="250" placeholder="Enter weight in kg" value="{{ form_values['weight_kg'] }}" required>
             </div>
             <p class="help"><a href="https://www.rapidtables.com/convert/weight/pound-to-kg.html" target="_blank">Converter: lb to kg</a></p>
           </div>
