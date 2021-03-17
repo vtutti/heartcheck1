@@ -58,7 +58,7 @@ footer .disclaimer {
   }
 }
 
-.button {
+.results .button {
   border: none;
   color: white;
   padding: 16px 32px;
@@ -71,35 +71,35 @@ footer .disclaimer {
   cursor: pointer;
 }
 
-.button1 {
+.results .button1 {
   background-color: #af4c65; 
   color: black; 
   
 }
 
-.button1:hover {
+.results .button1:hover {
   background-color: grey;
   color: white;
 }
 
-.button2 {
+.results .button2 {
   background-color:  #af4c65; 
   color: black; 
   
 }
 
-.button2:hover {
+.results .button2:hover {
   background-color: grey;
   color: white;
 }
 
-.button3 {
+.results .button3 {
   background-color:  #af4c65; 
   color: black; 
   
 }
 
-.button3:hover {
+.results .button3:hover {
   background-color: grey;
   color: white;
 }
