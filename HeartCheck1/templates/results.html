@@ -48,35 +48,45 @@
 }
 
 .button1 {
-  background-color: #af4c65; 
+  background-color: #FFB6C1; 
   color: black; 
   
 }
 
 .button1:hover {
-  background-color: grey;
+  background-color: #D3D3D3	;
   color: white;
 }
 
 .button2 {
-  background-color:  #af4c65; 
+  background-color:  #FFB6C1; 
   color: black; 
   
 }
 
 .button2:hover {
-  background-color: grey;
+  background-color: #D3D3D3	;
   color: white;
 }
 
 .button3 {
-  background-color:  #af4c65; 
+  background-color:  #FFB6C1; 
   color: black; 
   
 }
 
 .button3:hover {
-  background-color: grey;
+  background-color: #D3D3D3	;
+  color: white;
+}
+  .button4 {
+  background-color:  #ADD8E6; 
+  color: black; 
+  
+}
+
+.button4:hover {
+  background-color: #D3D3D3	;
   color: white;
 }
 
@@ -101,6 +111,8 @@
 <button class="button button2">Diet Chart</button>
 <button class="button button3">Exercise Guidance</button>
 </center>
+<div><center><button class="button button4" onclick="https://docs.google.com/forms/d/e/1FAIpQLSfWeBrKLXor-n-rMz4TTgKNBJvwRmlHpMMOKzjZ77_rsKW1rg/viewform?usp=sf_link">Feedback</button>
+        </center></div>
 {% endblock %}
 
 {% block footer %}
@@ -117,8 +129,7 @@
             <span class="tag is-dark">{{ value }}</span>
           </div>
         </div>
-      <div><center><button class="button button3" onclick="https://docs.google.com/forms/d/e/1FAIpQLSfWeBrKLXor-n-rMz4TTgKNBJvwRmlHpMMOKzjZ77_rsKW1rg/viewform?usp=sf_link">Feedback</button>
-        </center></div>
+      
       {% endfor %}
     </div>
   </div>
