@@ -5,6 +5,7 @@
 
 {% block content %}
 <div class="results">
+  <input type="button" a="https://login018.herokuapp.com/index.php" class="button button5" style="float: right;">/Log out</a></button>
   {% if prediction == 1 %}
     <!-- Increased Risk Detected (> 50% probability) -->
     <div class="results-main">
@@ -112,7 +113,22 @@ font-size: 18px;
   background-color: #FFBCD9;
   color: white;
 }
+.button5 {
+  background-color:#FFB6C1; 
+  border-color: black;
+  border-radius: 5px;  
+  color: black; 
+  font-family: Bahnschrift Light;
+  font-size: 18px;
+  font-weight: bold;
+}
 
+.button5:hover {
+  background-color: #FFBCD9;
+  color: white;
+}
+
+  
   a.black
   {
     color: black;
