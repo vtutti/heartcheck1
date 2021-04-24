@@ -91,48 +91,61 @@
           </label>
         </div>
       </div>
-  
-<p><h3>Physically Active</h3><br>
-    <label class="radio">Yes
-        <input type="radio" checked="checked" name="radio">
-        <span class="checkmark"></span>
-    </label>
-    <label class="radio">No
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-    </label>
-</p>
-
-<p><h3>Smoking</h3><br>
-    <label class="radio">Regular
-      <input type="radio" checked="checked" name="radio">
-      <span class="checkmark"></span>
-    </label>
-    <label class="radio">Occasional
-      <input type="radio" name="radio">
-      <span class="checkmark"></span>
-    </label>
-    <label class="radio">Never
-      <input type="radio" name="radio">
-      <span class="checkmark"></span>
-    </label>
-</p>
-
-<p><h3>Alcohol Consumption</h3><br>
-    <label class="radio">Regular
-      <input type="radio" checked="checked" name="radio">
-      <span class="checkmark"></span>
-    </label>
-    <label class="radio">Occasional
-      <input type="radio" name="radio">
-      <span class="checkmark"></span>
-    </label>
-    <label class="radio">Never
-      <input type="radio" name="radio">
-      <span class="checkmark"></span>
-    </label>
-</p>
-
+  <div class="field">
+        <label class="label">Physically active?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+        Yes
+            <span class="has-text-success">
+              <i class="fas fa-check"></i>
+            </span>
+          </label>
+        </div>
+ <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+            No
+            <span class="has-text-danger">
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+          </label>
+        </div>
+      </div>
+    
+ <div class="field">
+        <label class="label">Smoking?</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+        Regular
+            <span class="has-text-success">
+              <i class="fas fa-check"></i>
+            </span>
+          </label>
+        </div>
+    <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+        Occasional
+            <span class="has-text-warning">
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+          </label>
+        </div>
+      <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="2" required {% if form_values['cholesterol'] == '2' %} checked{% endif %}>
+            Regular
+            <span class="has-text-danger">
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+          </label>
+        </div>
+      </div>
+   
+   
+   
       <div class="field is-grouped">
         <div class="control">
           <input type="submit" class="button is-link">
