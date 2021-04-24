@@ -95,7 +95,7 @@
         <label class="label" >Physically active?</label>
         <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %} >
+            <input type="radio" name="pa" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %} >
         Yes
             <span class="has-text-success">
               <i class="fas fa-check"></i>
@@ -104,7 +104,7 @@
         </div>
  <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+            <input type="radio" name="pa" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
             No
             <span class="has-text-warning">
               <i class="fas fa-exclamation-circle"></i>
@@ -117,7 +117,7 @@
         <label class="label">Smoking?</label>
         <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+            <input type="radio" name="sm" value="0" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
         Regular
             <span class="has-text-success">
               <i class="fas fa-check"></i>
@@ -126,7 +126,7 @@
         </div>
     <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+            <input type="radio" name="sm" value="1" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
         Occasional
             <span class="has-text-warning">
               <i class="fas fa-exclamation-circle"></i>
@@ -135,7 +135,7 @@
         </div>
       <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="2" required {% if form_values['cholesterol'] == '2' %} checked{% endif %}>
+            <input type="radio" name="sm" value="2" required {% if form_values['cholesterol'] == '2' %} checked{% endif %}>
             Regular
             <span class="has-text-danger">
               <i class="fas fa-exclamation-circle"></i>
@@ -149,7 +149,7 @@
 Familial Hypertrophic Cardiomyopathy(Hereditary heart problems)</label>
         <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+            <input type="radio" name="hm" value="0" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
         yes
             <span class="has-text-danger">
               <i class="fas fa-exclamation-circle"></i>
@@ -158,7 +158,7 @@ Familial Hypertrophic Cardiomyopathy(Hereditary heart problems)</label>
         </div>
         <div class="control">
           <label class="radio">
-            <input type="radio" name="cholesterol" value="2" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+            <input type="radio" name="hm" value="2" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
           No
             <span class="has-text-success">
               <i class="fas fa-check  "></i>
