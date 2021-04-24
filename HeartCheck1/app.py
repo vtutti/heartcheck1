@@ -45,7 +45,11 @@ def process_form():
         'bp_diastolic': int(request.form['bp_diastolic']),
         'weight_kg': float(request.form['weight_kg']),
         'height_cm': float(request.form['height_cm']),
-        'cholesterol': int(request.form['cholesterol'])
+        'cholesterol': int(request.form['cholesterol']),
+        'pa': int(request.form['pa']),
+        'sm': int(request.form['sm']),
+        'hm': int(request.form['hm']),
+        
     }
 
     # We do not have a BMI field on our form, but our model requires it.
@@ -61,7 +65,22 @@ def process_form():
         1: "Above Normal",
         2: "Well Above Normal",
     }
-
+pa_descriptions = {
+        0: "Yes",
+        1: "No",
+       
+    }
+sm_descriptions = {
+        0: "Never",
+        1: "Occasional",
+        2:"Regular",
+       
+    }
+hm_descriptions = {
+        0: "Yo",
+        1: "Yes",
+       
+    }
     # These are the values that we will display on the results page
     input_values = {
         "Age": values['age'],
@@ -69,7 +88,10 @@ def process_form():
         "Weight": "%s kg" % values['weight_kg'],
         "Height": "%s cm" % values['height_cm'],
         "BMI": bmi,
-        "Cholesterol": cholesterol_descriptions[values['cholesterol']]
+        "Cholesterol": cholesterol_descriptions[values['cholesterol']],
+       "Physically active?": pa_descriptions[values['pa']],
+        "Smoking?": sm_descriptions[values['sm']],
+        "Familial Hypertrophic Cardiomyopathy(Hereditary heart problems)": hm_descriptions[values['hm']]
     }
 
     # Load the model & model params
