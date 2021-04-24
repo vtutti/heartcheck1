@@ -144,7 +144,28 @@
         </div>
       </div>
    
-   
+    <div class="field">
+        <label class="label">
+Familial Hypertrophic Cardiomyopathy(Hereditary heart problems)</label>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="0" required {% if form_values['cholesterol'] == '1' %} checked{% endif %}>
+        yes
+            <span class="has-text-danger">
+              <i class="fas fa-check"></i>
+            </span>
+          </label>
+        </div>
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="cholesterol" value="2" required {% if form_values['cholesterol'] == '0' %} checked{% endif %}>
+          No
+            <span class="has-text-success">
+              <i class="fas fa-exclamation-circle"></i>
+            </span>
+          </label>
+        </div>
+  </div>
    
       <div class="field is-grouped">
         <div class="control">
